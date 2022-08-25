@@ -47,3 +47,6 @@ class Step(models.Model):
     )
     order = models.SmallIntegerField()
     directions = models.CharField(max_length=300)
+
+    def __str__(self):
+        return f"{self.recipe} step # {self.order}"
